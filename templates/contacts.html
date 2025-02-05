@@ -1,0 +1,31 @@
+{% block contacts %}
+    {% extends "base.html" %}
+    {% block body %}
+        {% include "formerror.html" %}
+        {% block form %}
+            <form hx-swap="outerHTML" hx-post="/contact">
+                name:
+                <input {% if formdata.values.name %}value="{{ formdata.values.name }}"{% endif %}
+                       type="text"
+                       name="name" />
+                email:
+                <input {% if formdata.values.email %}value="{{ formdata.values.email }}"{% endif %}
+                       type="text"
+                       name="email" />
+                {% if formdata.errors.email %}<div class="text-red-600">{{ formdata.errors.email }}</div>{% endif %}
+                <button class="border-2" type="submit">Create Contact</button>
+            </form>
+        {% endblock %}
+        <hr />
+        {% block contactlist %}
+            <div class="flex flex-col" id="contactlist">
+                {% for contact in contacts %}
+                    {% include "contact.html" %}
+                {% endfor %}
+            </div>
+        {% endblock %}
+    {% endblock %}
+{% endblock %}
+{% block oob_contact %}
+    <div id="contactlist" hx-swap-oob="afterbegin">{% include "contact.html" %}</div>
+{% endblock %}

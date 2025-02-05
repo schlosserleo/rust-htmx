@@ -1,0 +1,19 @@
+{% block index %}
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title>Website</title>
+            <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta name="keywords" content="HTMX,Rust,minijinja" />
+            <meta name="description" content="HTMX with Rust an minijinja" />
+            <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+            <link href="/assets/main.css" rel="stylesheet" />
+        </head>
+        <body>
+            {% block body %}
+            {% endblock body %}
+        </body>
+    </html>
+{% endblock index %}
