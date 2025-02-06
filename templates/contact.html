@@ -1,5 +1,16 @@
 {% block contact %}
-    <div>
-        Name: <span>{{ contact.name }}</span> Email: <span>{{ contact.email }}</span>
+    <div class="flex" id="contact-{{ contact.id }}">
+        <div class="h-[1rem] w-[1rem] cursor-pointer"
+             hx-target="#contact-{{ contact.id }}"
+             hx-delete="/contact/{{ contact.id }}"
+             hx-swap="outerHTML">
+            <img src="static/images/delete.svg"
+                 alt="delete icon "
+                 height="800"
+                 width="800" />
+        </div>
+        Name: <span>{{ contact.name }}</span>
+        Email: <span>{{ contact.email }}</span>
+        ID: <span>{{ contact.id }}</span>
     </div>
 {% endblock %}
