@@ -2,7 +2,8 @@
 
 This is a learning project where i learn web development and/with rust
 
-I also vaguely try to follow [this HTMX course](https://www.youtube.com/watch?v=x7v6SNIgJpE) from primeagen
+I also vaguely try to follow
+[this HTMX course](https://www.youtube.com/watch?v=x7v6SNIgJpE) from Primeagen
 
 I chose this Techstack:
 
@@ -40,7 +41,9 @@ cargo watch -x run
 
 ## Thoughts
 
-For learning, something more simple/barebones couldve been better.
-Im noticing quite often, that i dont really understand rusts basics yet or even how the async stuff works.
+For learning, something more simple/barebones could've been better.
+Im noticing quite often, that i don't really understand rusts basics yet
+or even how the async stuff works.
 But the things i do understand, feel great and i learned very much already.
-So i dont care if this is too much to get into webdev because its a project that motivates me to get keep going.
+So i don't care if this is too much to get into webdev
+because its a project that motivates me to get keep going.
